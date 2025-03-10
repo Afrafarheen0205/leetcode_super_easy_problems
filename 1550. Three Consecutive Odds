@@ -1,0 +1,17 @@
+class Solution(object):
+    def threeConsecutiveOdds(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: bool
+        """
+        k=0
+        for i in arr:
+            if i%2!=0:
+                k+=1
+                if(k==3):
+                    return True
+            else:
+                k=0
+        return False
+            
+        

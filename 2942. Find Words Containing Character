@@ -1,0 +1,13 @@
+class Solution(object):
+    def findWordsContaining(self, words, x):
+        """
+        :type words: List[str]
+        :type x: str
+        :rtype: List[int]
+        """
+        k=len(words)
+        arr=[]
+        for i in range(0,k):
+            if (x in words[i]):
+                arr.append(i)
+        return arr

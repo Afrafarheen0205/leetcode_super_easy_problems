@@ -1,0 +1,20 @@
+class Solution(object):
+    def canAliceWin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        s_s=0
+        s_d=0
+        for i in nums:
+            if(i>=10):
+                s_d+=i
+            else:
+                s_s+=i
+        if(s_s==s_d):
+            return False
+        elif(s_s>s_d):
+            return True
+        elif(s_s<s_d):
+            return True
+        

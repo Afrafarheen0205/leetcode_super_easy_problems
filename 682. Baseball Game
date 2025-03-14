@@ -1,0 +1,21 @@
+class Solution(object):
+    def calPoints(self, operations):
+        """
+        :type operations: List[str]
+        :rtype: int
+        """
+        arr = []
+        s = 0
+        for i in operations:
+            if i == "C":
+                s -= arr.pop()
+            elif i == 'D':
+                arr.append(2*arr[-1])
+                s += arr[-1]
+            elif i == "+":
+                arr.append(arr[-1] + arr[-2])
+                s += arr[-1]
+            else:
+                arr.append(int(i))
+                s += arr[-1]
+        return s
